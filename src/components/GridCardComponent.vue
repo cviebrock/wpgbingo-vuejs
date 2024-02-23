@@ -13,7 +13,7 @@ const emit = defineEmits<{
 
 const card = props.card;
 const gridArea = card.id;
-const imagePath = `/src/assets/images/${props.challengeId}/${card.img}`;
+const imagePath = `../assets/images/${props.challengeId}/${card.img}`;
 const imageURL = new URL(imagePath, import.meta.url).href;
 </script>
 
