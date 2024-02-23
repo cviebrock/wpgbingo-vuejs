@@ -7,7 +7,7 @@ const props = defineProps<{
 }>();
 
 const card = props.card;
-const imagePath = `/images/${props.challengeId}/${card.img}`;
+const imagePath = `/images-md/${props.challengeId}/${card.img}`;
 </script>
 
 <template>

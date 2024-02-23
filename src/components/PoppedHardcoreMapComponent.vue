@@ -6,7 +6,7 @@ const props = defineProps<{
   challengeId: tChallengeId;
 }>();
 
-const imagePath = `/images/${props.challengeId}/hardcore-map.jpg`;
+const imagePath = `/images-md/${props.challengeId}/hardcore-map.jpg`;
 </script>
 
 <template>

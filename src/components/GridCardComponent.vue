@@ -13,7 +13,7 @@ const emit = defineEmits<{
 
 const card = props.card;
 const gridArea = card.id;
-const imageURL = `/images/${props.challengeId}/${card.img}`;
+const imageURL = `/images-sm/${props.challengeId}/${card.img}`;
 </script>
 
 <template>
