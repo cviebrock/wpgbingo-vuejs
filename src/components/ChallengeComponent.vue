@@ -5,6 +5,7 @@ import GridCardComponent from './GridCardComponent.vue';
 import GridButtonComponent from './GridButtonComponent.vue';
 import PoppedCardComponent from './PoppedCardComponent.vue';
 import MapItComponent from './MapItComponent.vue';
+import ModalComponent from './ModalComponent.vue';
 
 const props = defineProps<{
   challengeId: tChallengeId;
@@ -103,9 +104,11 @@ function isCardInSelectedRoute(card: tCard) {
     </svg>
   </section>
 
-  <PoppedCardComponent v-if="poppedCard" :card="poppedCard" :challenge-id="challengeId" @unpop="unpopCard" />
+  <ModalComponent v-if="poppedCard" @close="unpopCard">
+    <PoppedCardComponent :challenge-id="challengeId" :card="poppedCard" />
+  </ModalComponent>
 
-  <MapItComponent v-if="selectedRoute" :dist="selectedRoute.dist" :url="selectedRoute.url"/>
+  <MapItComponent v-if="selectedRoute" :dist="selectedRoute.dist" :url="selectedRoute.url" />
 </template>
 
 <style scoped>

@@ -23,7 +23,7 @@ main {
 
 @media (min-width: 768px) {
   main {
-    padding: 0 2rem;
+    padding: 0 2rem 4rem 2rem;
   }
 }
 </style>

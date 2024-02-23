@@ -19,7 +19,7 @@ import { challenges } from '@/data/challenges';
       </nav>
     </section>
     <section class="map">
-      <img src="../assets/images/map.jpg" />
+      <img src="/images/map.jpg" />
     </section>
     <nav class="header">
       <RouterLink :to="{ name: 'about' }">About</RouterLink>
@@ -80,7 +80,7 @@ nav.challenges {
     white-space: nowrap;
     background-color: var(--color-button);
     color: var(--color-button-text);
-    border-radius: var(--radius-small);
+    border-radius: var(--radius-sm);
     padding: 0.5rem 1rem;
 
     &:hover {
