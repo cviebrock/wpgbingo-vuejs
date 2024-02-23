@@ -104,7 +104,7 @@ function isCardInSelectedRoute(card: tCard) {
     </svg>
   </section>
 
-  <ModalComponent v-if="poppedCard" @close="unpopCard">
+  <ModalComponent v-if="poppedCard" @unpop="unpopCard">
     <PoppedCardComponent :challenge-id="challengeId" :card="poppedCard" />
   </ModalComponent>
 
@@ -139,8 +139,8 @@ nav {
       color: var(--gray-lightest);
     }
     &.selected {
-      background-color: var(--complementary-light);
-      color: var(--complementary-lightest);
+      background-color: var(--secondary-light);
+      color: var(--secondary-lightest);
     }
   }
 }

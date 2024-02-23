@@ -66,9 +66,9 @@ const iconRotation = computed((): string => {
   }
 
   &.selected {
-    background-color: var(--complementary-light);
+    background-color: var(--secondary-light);
     svg {
-      fill: var(--complementary-lighter);
+      fill: var(--secondary-lighter);
     }
   }
 

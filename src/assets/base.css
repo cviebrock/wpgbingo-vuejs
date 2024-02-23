@@ -1,7 +1,7 @@
 :root {
   --theme-gray: #787f82;
   --theme-primary: rgb(29 78 216);
-  --theme-complementary: rgb(216 73 29);
+  --theme-secondary: rgb(216 73 29);
 }
 
 :root {
@@ -22,13 +22,13 @@
   --primary-lighter: hsl(from var(--theme-primary) h s 85%);
   --primary-lightest: hsl(from var(--theme-primary) h s 95%);
 
-  --complementary-darkest: hsl(from var(--theme-complementary) h s 15%);
-  --complementary-darker: hsl(from var(--theme-complementary) h s 25%);
-  --complementary-dark: hsl(from var(--theme-complementary) h s 35%);
-  --complementary: var(--theme-complementary);
-  --complementary-light: hsl(from var(--theme-complementary) h s 75%);
-  --complementary-lighter: hsl(from var(--theme-complementary) h s 85%);
-  --complementary-lightest: hsl(from var(--theme-complementary) h s 95%);
+  --secondary-darkest: hsl(from var(--theme-secondary) h s 15%);
+  --secondary-darker: hsl(from var(--theme-secondary) h s 25%);
+  --secondary-dark: hsl(from var(--theme-secondary) h s 35%);
+  --secondary: var(--theme-secondary);
+  --secondary-light: hsl(from var(--theme-secondary) h s 75%);
+  --secondary-lighter: hsl(from var(--theme-secondary) h s 85%);
+  --secondary-lightest: hsl(from var(--theme-secondary) h s 95%);
 
 }
 
@@ -54,8 +54,6 @@
   --shadow: 0 20px 13px rgba(0 0 0 / 0.05);
 
   --homepage-welcome-width: 40%;
-
-  --link-transition: color 0.3s, background-color 0.3s, border-color 0.3s;
 }
 
 /*

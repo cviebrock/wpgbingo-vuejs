@@ -22,7 +22,7 @@ function unpopChallenge() {
 
 <template>
   <main>
-    <h1>About Winnipeg Bike Bingo</h1>
+    <h1>About Winnipeg Bicycle Bingo</h1>
     <p>
       Welcome to this web site, where we hope to show you that there are ways to explore Winnipeg on bicycle
       via trails, separated paths and speed-reduced residential streets (although there are some areas where
@@ -39,14 +39,14 @@ function unpopChallenge() {
       relatively short (15-20 km) lines of five landmarks. Others are longer.
     </p>
     <p>
-      Once you decide on a row, column or loop, you can click on the “Map it” button and a suggested route
+      Once you decide on a row, column, or loop, you can click on the “Map it” button and a suggested route
       will pop up, showing you one potential way to reach all of the selected landmarks.
     </p>
     <p>
       There is also a “hardcore” challenge which requires you to visit all landmarks on the bingo card in one
       day. If you do that and can provide evidence via a publicly available tracker (such as Strava), you can
       be added to our <RouterLink :to="{ name: 'wall-of-fame' }">Wall of Fame</RouterLink>. See the full map
-      for our easier, harder, and history hardcore challenges below along with some helpful .gpx files to keep
+      for our hardcore challenges below, and download some helpful .gpx files to keep
       you on track during your ride:
     </p>
     <ul>
@@ -64,7 +64,7 @@ function unpopChallenge() {
     <p><strong>Good luck and safe travels!</strong></p>
     <a class="btn" @click="$router.back()">Go Back</a>
 
-    <ModalComponent v-if="poppedChallenge" @close="unpopChallenge" :width="'50rem'">
+    <ModalComponent v-if="poppedChallenge" @unpop="unpopChallenge" :width="'45rem'">
       <PoppedHardcoreMapComponent :challenge-id="poppedChallenge" />
     </ModalComponent>
   </main>
@@ -93,7 +93,12 @@ ul a {
     background-color: var(--primary-lightest);
   }
 }
-a.btn {
+
+a{
+  margin-top: 1rem;
+}
+.btn {
+  display: inline-block;
   text-decoration: none;
   white-space: nowrap;
   background-color: var(--color-button);

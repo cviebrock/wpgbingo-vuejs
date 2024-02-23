@@ -72,7 +72,7 @@ const imageURL = `/images/${props.challengeId}/${card.img}`;
   }
 
   &.selected {
-    background-color: var(--complementary-light);
+    background-color: var(--secondary-light);
   }
 }
 

@@ -8,7 +8,10 @@ useHead({
 
 <template>
   <main>
-    <h1>This is the Wall of Fame</h1>
+    <h1>Wall of Fame</h1>
+    <p>
+      Coming soon...
+    </p>
   </main>
 </template>
 

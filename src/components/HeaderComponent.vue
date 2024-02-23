@@ -26,7 +26,6 @@ nav {
     text-decoration: none;
     color: var(--gray);
     border-bottom: 2px solid transparent;
-    transition: var(--link-transition);
 
     &:hover {
       color: var(--primary);

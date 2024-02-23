@@ -1,12 +1,17 @@
 <script setup lang="ts">
-const props = defineProps<{
-  width: string;
-}>();
+interface Props {
+  width?: string;
+  closeText?: string;
+}
+const props = withDefaults(defineProps<Props>(), {
+  width: '30rem',
+  closeText: 'Close',
+});
 
-const modalWidth = props.width ?? '30rem'
+const modalWidth = props.width;
 
 const emit = defineEmits<{
-  close: [];
+  unpop: [];
 }>();
 </script>
 
@@ -16,10 +21,10 @@ const emit = defineEmits<{
       <slot></slot>
     </div>
     <div class="close">
-      <a class="btn" @click="emit('close')">Close</a>
+      <a class="btn" @click="emit('unpop')">{{ props.closeText }}</a>
     </div>
   </aside>
-  <div class="modal-bg" @click="emit('close')"></div>
+  <div class="modal-bg" @click="emit('unpop')"></div>
 </template>
 
 <style scoped>
@@ -44,12 +49,13 @@ aside {
   margin: 1rem auto;
   width: v-bind(modalWidth);
   max-width: calc(100% - 2rem);
-  height: calc(100% - 2rem);
+  max-height: calc(100% - 2rem);
   background-color: var(--gray-lightest);
   border-radius: var(--radius-lg);
   overflow: hidden scroll;
   display: flex;
   flex-direction: column;
+  place-self: center;
   z-index: 100;
   box-shadow: 0 0 1rem var(--color-modal-background);
   animation: pop-in 0.5s;
