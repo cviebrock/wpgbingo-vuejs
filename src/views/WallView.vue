@@ -9,9 +9,7 @@ useHead({
 <template>
   <main>
     <h1>Wall of Fame</h1>
-    <p>
-      Coming soon...
-    </p>
+    <p>Coming soon...</p>
   </main>
 </template>
 

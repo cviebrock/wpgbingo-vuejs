@@ -5,7 +5,8 @@ import HeaderComponent from '@/components/HeaderComponent.vue';
 import { useHead } from '@unhead/vue';
 
 useHead({
-  titleTemplate: (title?: string) => (!title ? 'Winnipeg Bicycle Bingo' : `${title} - Winnipeg Bicycle Bingo`),
+  titleTemplate: (title?: string) =>
+    !title ? 'Winnipeg Bicycle Bingo' : `${title} - Winnipeg Bicycle Bingo`,
 });
 </script>
 

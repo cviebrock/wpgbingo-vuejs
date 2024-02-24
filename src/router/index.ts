@@ -15,7 +15,7 @@ const router = createRouter({
     {
       path: '/go/:id',
       name: 'challenge',
-      beforeEnter: (to, from) => {
+      beforeEnter: (to) => {
         const id = to.params.id as string;
         if (!Object.keys(challenges).includes(id)) {
           return {

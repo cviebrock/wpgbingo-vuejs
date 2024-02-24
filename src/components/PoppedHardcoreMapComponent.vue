@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { tChallengeId } from '@/types';
 
-
 const props = defineProps<{
   challengeId: tChallengeId;
 }>();
@@ -11,7 +10,7 @@ const imagePath = `/images-md/${props.challengeId}/hardcore-map.jpg`;
 
 <template>
   <section>
-    <img :src="imagePath" :alt="`${props.challengeId} hardcore map`"/>
+    <img :src="imagePath" :alt="`${props.challengeId} hardcore map`" />
   </section>
 </template>
 
@@ -21,5 +20,4 @@ img {
   width: 100%;
   max-height: calc(100% - 5rem);
 }
-
 </style>

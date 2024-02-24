@@ -61,7 +61,7 @@ figcaption {
   width: 100%;
   height: 120%;
   padding: 0.5rem;
-  font-size: 0; 
+  font-size: 0;
   font-weight: 600;
   line-height: 1.2;
   color: var(--gray-lightest);

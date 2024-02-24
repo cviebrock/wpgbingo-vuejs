@@ -1,12 +1,13 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <section>
     <div class="warning">!</div>
     <h1>Warning</h1>
     <p>
-      I understand that cycling in Winnipeg includes areas where cyclists are not separated from traffic, that suggested routes may not reflect current conditions and that I am responsible for planning a route that suits current infrastructure and road conditions as well as my personal health and ability.
+      I understand that cycling in Winnipeg includes areas where cyclists are not separated from traffic, that
+      suggested routes may not reflect current conditions and that I am responsible for planning a route that
+      suits current infrastructure and road conditions as well as my personal health and ability.
     </p>
   </section>
 </template>

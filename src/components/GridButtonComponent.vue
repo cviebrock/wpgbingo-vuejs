@@ -46,7 +46,7 @@ const iconRotation = computed((): string => {
     display: flex;
     justify-content: center;
     align-items: center;
-    width:100%;
+    width: 100%;
     height: 100%;
   }
 
@@ -71,8 +71,5 @@ const iconRotation = computed((): string => {
       fill: var(--secondary-lighter);
     }
   }
-
-
-
 }
 </style>
