@@ -32,11 +32,13 @@ section {
   justify-content: center;
   align-items: center;
   color: var(--primary-lightest);
+  box-shadow: var(--shadow-dark);
+
 }
 .dist {
   font-size: 1rem;
   line-height: 1.2;
-  font-weight: 700;
+  font-weight: var(--weight-black);
 }
 a {
   font-size: 0.875rem;

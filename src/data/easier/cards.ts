@@ -1,5 +1,7 @@
 import type { tCard } from '@/types';
 
+// images are relative to /public/images/easier
+
 const cards: tCard[] = [
   {
     id: 'a1',

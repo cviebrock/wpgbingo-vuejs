@@ -26,16 +26,20 @@ function unpopChallenge() {
     <p>
       Welcome to this web site, where we hope to show you that there are ways to explore Winnipeg on bicycle
       via trails, separated paths and speed-reduced residential streets (although there are some areas where
-      the cycling infrastructure leaves a lot to be desired)
+      the cycling infrastructure leaves a lot to be desired).
     </p>
     <p>
-      There are three bingo cards: an easier one that features more protected infrastructure and direct
-      travel, a harder one that is more on-road and has some hard-to-find spots, and a historical tour
+      There are three bingo cards: an
+      <RouterLink :to="{ name: 'challenge', params: { id: 'easier' } }">easier</RouterLink> one that features
+      more protected infrastructure and direct travel, a
+      <RouterLink :to="{ name: 'challenge', params: { id: 'harder' } }">harder</RouterLink> one that is more
+      on-road and has some hard-to-find spots, and a
+      <RouterLink :to="{ name: 'challenge', params: { id: 'history' } }">historical tour</RouterLink>
       bringing you to historically significant places in Winnipeg.
     </p>
     <p>
       Each bingo card has 25 or more landmarks. You can click on buttons to be shown a row, column or loop of
-      landmarks, which will be highlighted. You can click repeatedly until you find one you like. Some are
+      landmarks, which will be highlighted. Click until you find one you like. Some are
       relatively short (15-20 km) lines of five landmarks. Others are longer.
     </p>
     <p>
@@ -52,8 +56,8 @@ function unpopChallenge() {
     <ul>
       <li v-for="(challenge, key) in challenges" :key="key">
         {{ challenge.name }} Hardcore Challenge:
-        <a class="btn" @click="popChallenge(key)">map</a>
-        <a class="btn" :href="`/gpx/WPGBingo-hardcore-${key}.gpx`">gpx</a>
+        <a class="btn btn-sm" @click="popChallenge(key)">map</a>
+        <a class="btn btn-sm" :href="`/gpx/WPGBingo-hardcore-${key}.gpx`">gpx</a>
       </li>
     </ul>
     <p>
@@ -72,25 +76,6 @@ function unpopChallenge() {
 </template>
 
 <style scoped>
-p,
-ul {
-  margin-bottom: 1rem;
-}
-strong {
-  font-weight: 600;
-}
-li .btn {
-  --btn-bg: var(--gray-lightest);
-  --btn-txt: var(--gray);
-  --btn-bg-hover: var(--primary-lightest);
-  --btn-text-hover: var(--gray);
-
-  padding: 0.25rem;
-  font-size: 0.875rem;
-  margin-left: 0.5rem;
-  text-transform: uppercase;
-}
-
 a.back {
   margin-top: 1rem;
 }

@@ -40,6 +40,7 @@ figure {
   border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-light);
 }
 
 img {
@@ -62,7 +63,6 @@ figcaption {
   height: 120%;
   padding: 0.5rem;
   font-size: 0;
-  font-weight: 600;
   line-height: 1.2;
   color: var(--gray-lightest);
   opacity: 0;

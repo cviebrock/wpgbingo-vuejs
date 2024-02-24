@@ -31,10 +31,6 @@ div {
   margin: 1rem;
 }
 
-h2 {
-  font-weight: 600;
-}
-
 @media (min-width: 768px) {
   div {
     margin: 2rem;

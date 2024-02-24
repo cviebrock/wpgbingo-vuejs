@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import type { tChallengeId, tCard, tRoute, tRouteId } from '@/types';
-import GridCardComponent from './GridCardComponent.vue';
-import GridButtonComponent from './GridButtonComponent.vue';
+import ChallengeCardComponent from './ChallengeCardComponent.vue';
+import ChallengeButtonComponent from './ChallengeButtonComponent.vue';
 import PoppedCardComponent from './PoppedCardComponent.vue';
 import MapItComponent from './MapItComponent.vue';
 import ModalComponent from './ModalComponent.vue';
@@ -62,7 +62,7 @@ function isCardInSelectedRoute(card: tCard) {
     <p>
       Click a row, column,
       <template v-if="hasDiagonals">diagonal, </template>
-      or one of the following routes:
+      or one of the pre-defined routes.
     </p>
     <nav>
       <a
@@ -78,7 +78,7 @@ function isCardInSelectedRoute(card: tCard) {
     </nav>
 
     <div class="grid">
-      <GridCardComponent
+      <ChallengeCardComponent
         v-for="card in cards"
         :key="card.id"
         :challenge-id="challengeId"
@@ -86,7 +86,7 @@ function isCardInSelectedRoute(card: tCard) {
         :selected="isCardInSelectedRoute(card)"
         @popup="popupCard"
       />
-      <GridButtonComponent
+      <ChallengeButtonComponent
         v-for="route in buttonRoutes"
         :key="route.id"
         :route="route"
@@ -113,14 +113,13 @@ function isCardInSelectedRoute(card: tCard) {
 
 <style scoped>
 p {
-  margin-bottom: 1rem;
   font-size: 0.875rem;
   color: var(--gray);
 }
 
 nav {
   display: flex;
-  justify-content: stretch;
+  justify-content: flex-start;
   gap: 0.5rem;
   margin-bottom: 1rem;
 
@@ -131,6 +130,11 @@ nav {
       color: var(--secondary-lightest);
     }
   }
+  /*
+  .btn:last-child {
+    margin-left: auto;
+  }
+  */
 }
 
 .grid {

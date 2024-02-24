@@ -13,7 +13,7 @@ $theme-secondary: rgb(216 73 29);
   --gray-darker: #{color.change($theme-gray, $lightness: 25%)};
   --gray-dark: #{color.change($theme-gray, $lightness: 35%)};
   --gray: #{$theme-gray};
-  --gray-light: #{color.change($theme-gray, $lightness: 75%)};
+  --gray-light: #{color.change($theme-gray, $lightness: 70%)};
   --gray-lighter: #{color.change($theme-gray, $lightness: 85%)};
   --gray-lightest: #{color.change($theme-gray, $lightness: 95%)};
   --white: #fff;
@@ -22,7 +22,7 @@ $theme-secondary: rgb(216 73 29);
   --primary-darker: #{color.change($theme-primary, $lightness: 25%)};
   --primary-dark: #{color.change($theme-primary, $lightness: 35%)};
   --primary: #{$theme-primary};
-  --primary-light: #{color.change($theme-primary, $lightness: 75%)};
+  --primary-light: #{color.change($theme-primary, $lightness: 70%)};
   --primary-lighter: #{color.change($theme-primary, $lightness: 85%)};
   --primary-lightest: #{color.change($theme-primary, $lightness: 95%)};
 
@@ -30,7 +30,7 @@ $theme-secondary: rgb(216 73 29);
   --secondary-darker: #{color.change($theme-secondary, $lightness: 25%)};
   --secondary-dark: #{color.change($theme-secondary, $lightness: 35%)};
   --secondary: #{$theme-secondary};
-  --secondary-light: #{color.change($theme-secondary, $lightness: 75%)};
+  --secondary-light: #{color.change($theme-secondary, $lightness: 70%)};
   --secondary-lighter: #{color.change($theme-secondary, $lightness: 85%)};
   --secondary-lightest: #{color.change($theme-secondary, $lightness: 95%)};
 }
@@ -54,7 +54,12 @@ $theme-secondary: rgb(216 73 29);
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
 
-  --shadow: 0 20px 13px rgba(0 0 0 / 0.05);
+  --weight-normal: 400;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  --shadow-light: 5px 15px 15px rgba(0 0 0 / 0.05);
+  --shadow-dark: 2px 5px 5px rgba(0 0 0 / 0.1);
 
   --homepage-welcome-width: 40%;
 
@@ -71,63 +76,3 @@ $theme-secondary: rgb(216 73 29);
   }
 }
 */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  font-weight: normal;
-}
-
-:root {
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-}
-@supports (font-variation-settings: normal) {
-  :root {
-    font-family:
-      'Inter var',
-      -apple-system,
-      BlinkMacSystemFont,
-      'Segoe UI',
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      'Fira Sans',
-      'Droid Sans',
-      'Helvetica Neue',
-      sans-serif;
-  }
-}
-
-body {
-  min-width: 320px;
-  min-height: 100vh;
-  color: var(--color-text);
-  background: var(--color-background);
-  line-height: 1.6;
-  font-weight: normal;
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media (max-width: 420px) {
-  body {
-    font-size: 14px;
-  }
-}

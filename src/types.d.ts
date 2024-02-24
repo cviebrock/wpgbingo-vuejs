@@ -40,3 +40,12 @@ export type tRoute = {
   url: string;
   dist: number;
 };
+
+export type tWallEntry = {
+  name: string;
+  date: string;
+  img: string;
+  url: string;
+}
+
+export type tWall = Record<tChallengeId, tWallEntry[]>;

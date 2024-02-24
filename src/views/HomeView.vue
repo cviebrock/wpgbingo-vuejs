@@ -79,7 +79,6 @@ nav {
 h1 {
   font-size: 3rem;
   line-height: 3rem;
-  font-weight: 700;
   color: var(--color-heading);
 
   .surtitle {

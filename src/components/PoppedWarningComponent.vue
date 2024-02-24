@@ -27,13 +27,11 @@ section {
   color: var(--secondary-lightest);
   font-size: 4rem;
   line-height: 1;
-  font-weight: 600;
+  font-weight: var(--weight-black);
   border-radius: 100%;
   text-align: center;
 }
 h1 {
   margin: 1rem 0;
-  font-size: 2rem;
-  font-weight: 600;
 }
 </style>
