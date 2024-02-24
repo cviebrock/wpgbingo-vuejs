@@ -1,0 +1,48 @@
+@use './base.scss';
+
+// @TODO mixins or more utility classes here to reduce duplication?
+
+.btn {
+  --btn-bg: var(--gray-lighter);
+  --btn-txt: var(--gray-darker);
+  --btn-bg-hover: var(--gray-light);
+  --btn-text-hover: var(--gray-lightest);
+
+  display: inline-block;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+  background-color: var(--btn-bg);
+  color: var(--btn-txt);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+
+  transition: var(--link-transition);
+
+  &:hover {
+    background-color: var(--btn-bg-hover);
+    color: var(--btn-txt-hover);
+  }
+}
+
+.btn.btn-wide {
+  width: 100%;
+  text-align: center;
+}
+
+.btn.btn-primary {
+  --btn-bg-hover: var(--primary);
+  --btn-txt-hover: var(--primary-lightest);
+}
+
+.link-header {
+  text-decoration: none;
+  color: var(--gray);
+  border-bottom: 2px solid transparent;
+  transition: var(--link-transition);
+
+  &:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary-lighter);
+  }
+}

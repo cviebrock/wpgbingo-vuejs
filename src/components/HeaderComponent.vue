@@ -5,9 +5,9 @@ import { RouterLink } from 'vue-router';
 <template>
   <header>
     <nav>
-      <RouterLink :to="{ name: 'home' }">Home</RouterLink>
-      <RouterLink :to="{ name: 'about' }">About</RouterLink>
-      <RouterLink :to="{ name: 'wall-of-fame' }">Wall Of Fame</RouterLink>
+      <RouterLink :to="{ name: 'home' }" class="link-header">Home</RouterLink>
+      <RouterLink :to="{ name: 'about' }" class="link-header">About</RouterLink>
+      <RouterLink :to="{ name: 'wall-of-fame' }" class="link-header">Wall Of Fame</RouterLink>
     </nav>
   </header>
 </template>
@@ -22,18 +22,7 @@ nav {
   justify-content: flex-end;
   gap: 1rem;
 
-  a {
-    text-decoration: none;
-    color: var(--gray);
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      color: var(--primary);
-      border-bottom-color: var(--primary-lighter);
-    }
-  }
-
-  a:first-child {
+  .link-header:first-child {
     margin-right: auto;
   }
 }

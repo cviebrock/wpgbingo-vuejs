@@ -46,14 +46,14 @@ function unpopChallenge() {
       There is also a “hardcore” challenge which requires you to visit all landmarks on the bingo card in one
       day. If you do that and can provide evidence via a publicly available tracker (such as Strava), you can
       be added to our <RouterLink :to="{ name: 'wall-of-fame' }">Wall of Fame</RouterLink>. See the full map
-      for our hardcore challenges below, and download some helpful .gpx files to keep
-      you on track during your ride:
+      for our hardcore challenges below, and download some helpful .gpx files to keep you on track during your
+      ride:
     </p>
     <ul>
       <li v-for="(challenge, key) in challenges" :key="key">
         {{ challenge.name }} Hardcore Challenge:
-        <a @click="popChallenge(key)">map</a>
-        <a :href="`/gpx/WPGBingo-hardcore-${key}.gpx`">gpx</a>
+        <a class="btn" @click="popChallenge(key)">map</a>
+        <a class="btn" :href="`/gpx/WPGBingo-hardcore-${key}.gpx`">gpx</a>
       </li>
     </ul>
     <p>
@@ -62,8 +62,9 @@ function unpopChallenge() {
       go through a complex web of residential streets or twisty park paths.
     </p>
     <p><strong>Good luck and safe travels!</strong></p>
-    <a class="btn" @click="$router.back()">Go Back</a>
-
+    <p>
+      <a class="btn btn-primary back" @click="$router.back()">Go Back</a>
+    </p>
     <ModalComponent v-if="poppedChallenge" @unpop="unpopChallenge" :width="'45rem'">
       <PoppedHardcoreMapComponent :challenge-id="poppedChallenge" />
     </ModalComponent>
@@ -78,37 +79,19 @@ ul {
 strong {
   font-weight: 600;
 }
-ul a {
-  display: inline-block;
+li .btn {
+  --btn-bg: var(--gray-lightest);
+  --btn-txt: var(--gray);
+  --btn-bg-hover: var(--primary-lightest);
+  --btn-text-hover: var(--gray);
+
   padding: 0.25rem;
   font-size: 0.875rem;
   margin-left: 0.5rem;
   text-transform: uppercase;
-  text-decoration: none;
-  white-space: nowrap;
-  color: var(--gray);
-
-  &:hover {
-    border-radius: var(--radius-sm);
-    background-color: var(--primary-lightest);
-  }
 }
 
-a{
+a.back {
   margin-top: 1rem;
-}
-.btn {
-  display: inline-block;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: var(--color-button);
-  color: var(--color-button-text);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 1rem;
-
-  &:hover {
-    background-color: var(--color-button-primary);
-    color: var(--color-button-primary-text);
-  }
 }
 </style>

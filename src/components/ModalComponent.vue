@@ -21,7 +21,7 @@ const emit = defineEmits<{
       <slot></slot>
     </div>
     <div class="close">
-      <a class="btn" @click="emit('unpop')">{{ props.closeText }}</a>
+      <a class="btn btn-primary" @click="emit('unpop')">{{ props.closeText }}</a>
     </div>
   </aside>
   <div class="modal-bg" @click="emit('unpop')"></div>
@@ -68,20 +68,6 @@ aside {
   margin: 1rem;
   flex-grow: 0;
   text-align: right;
-}
-a.btn {
-  display: inline-block;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: var(--color-button);
-  color: var(--color-button-text);
-  border-radius: var(--radius-sm);
-  padding: 0.5rem 1rem;
-
-  &:hover {
-    background-color: var(--color-button-primary);
-    color: var(--color-button-primary-text);
-  }
 }
 
 @keyframes pop-in {

@@ -31,54 +31,63 @@ const imageURL = `/images-sm/${props.challengeId}/${card.img}`;
 .grid-card {
   padding: 0.25rem;
   grid-area: v-bind(gridArea);
-
-  figure {
-    border-radius: var(--radius-md);
-    position: relative;
-    overflow: hidden;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1;
-    /* border-radius: var(--radius-md); */
-    object-fit: cover;
-  }
-
-  figcaption {
-    position: absolute;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-    padding: 0.5rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    line-height: 1.2;
-    color: var(--gray-lightest);
-    opacity: 0;
-    background-color: var(--color-modal-background);
-    transition: all 0.3s ease-in-out;
-  }
-
-  figure:hover figcaption {
-    opacity: 1;
-    height: 100%;
-  }
-
   &.selected {
     background-color: var(--secondary-light);
+  }
+}
+
+figure {
+  border-radius: var(--radius-md);
+  position: relative;
+  overflow: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1;
+  /* border-radius: var(--radius-md); */
+  object-fit: cover;
+}
+
+figcaption {
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  padding: 0.5rem;
+  font-size: 0; 
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--gray-lightest);
+  opacity: 0;
+  text-overflow: ellipsis;
+  background-color: var(--color-modal-background);
+  transition: all 0.3s ease-in-out;
+}
+
+figure:hover figcaption {
+  opacity: 1;
+  height: 100%;
+}
+
+@media (min-width: 550px) {
+  figcaption {
+    font-size: 0.75rem;
   }
 }
 
 @media (min-width: 768px) {
   .grid-card {
     padding: 0.5rem;
+  }
+  figcaption {
+    font-size: 1rem;
   }
 }
 </style>

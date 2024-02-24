@@ -165,7 +165,8 @@ const cards: tCard[] = [
   },
   {
     id: 'c6',
-    name: 'Chief Peguis/Tommy Prince',
+    // there are thin spaces (U+2009) around the solidus (/) to help with wrapping
+    name: 'Chief Peguis / Tommy Prince',
     desc: 'Statues of two great First Nation men, Chief Peguis and Tommy Prince.',
     img: '28-peguis-prince.jpg',
   },

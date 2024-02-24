@@ -66,7 +66,7 @@ function isCardInSelectedRoute(card: tCard) {
     </p>
     <nav>
       <a
-        :class="['btn', isRouteSelected(route) ? 'selected' : '', route.id === 'hc' ? 'hardcore' : '']"
+        :class="['btn btn-wide', isRouteSelected(route) ? 'selected' : '']"
         href="#"
         v-for="route in navRoutes"
         :key="route.id"
@@ -125,19 +125,7 @@ nav {
   margin-bottom: 1rem;
 
   .btn {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    background-color: var(--color-button);
-    color: var(--color-button-text);
-    border-radius: var(--radius-sm);
     padding: 0.25rem 0.5rem;
-
-    &:hover {
-      background-color: var(--gray-light);
-      color: var(--gray-lightest);
-    }
     &.selected {
       background-color: var(--secondary-light);
       color: var(--secondary-lightest);

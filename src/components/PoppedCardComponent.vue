@@ -24,6 +24,7 @@ const imagePath = `/images-md/${props.challengeId}/${card.img}`;
 img {
   display: block;
   width: 100%;
+  aspect-ratio: 4/3;
 }
 
 div {

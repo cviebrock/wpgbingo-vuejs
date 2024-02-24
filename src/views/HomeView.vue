@@ -19,7 +19,6 @@ onBeforeMount(() => {
     seenWarning.value = true;
   }
 });
-
 </script>
 
 <template>
@@ -31,7 +30,7 @@ onBeforeMount(() => {
       </h1>
       <nav class="challenges">
         <template v-for="(item, key) in challenges" :key="key">
-          <RouterLink :to="{ name: 'challenge', params: { id: key } }">
+          <RouterLink :to="{ name: 'challenge', params: { id: key } }" class="btn btn-primary">
             {{ item.name }}
           </RouterLink>
         </template>
@@ -41,8 +40,8 @@ onBeforeMount(() => {
       <img src="/images/map.jpg" />
     </section>
     <nav class="header">
-      <RouterLink :to="{ name: 'about' }">About</RouterLink>
-      <RouterLink :to="{ name: 'wall-of-fame' }">Wall Of Fame</RouterLink>
+      <RouterLink :to="{ name: 'about' }" class="link-header">About</RouterLink>
+      <RouterLink :to="{ name: 'wall-of-fame' }" class="link-header">Wall Of Fame</RouterLink>
     </nav>
   </main>
 
@@ -93,20 +92,6 @@ nav.challenges {
   padding: 1rem 0;
   gap: 0.5rem;
   flex-flow: wrap;
-
-  a {
-    text-decoration: none;
-    white-space: nowrap;
-    background-color: var(--color-button);
-    color: var(--color-button-text);
-    border-radius: var(--radius-sm);
-    padding: 0.5rem 1rem;
-
-    &:hover {
-      background-color: var(--color-button-primary);
-      color: var(--color-button-primary-text);
-    }
-  }
 }
 
 nav.header {
@@ -114,18 +99,6 @@ nav.header {
   gap: 2rem;
   padding: 1rem 2rem;
   justify-content: flex-end;
-
-  a {
-    text-decoration: none;
-    color: var(--gray);
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      color: var(--primary);
-      border-bottom-color: var(--primary-lighter);
-    }
-  }
-
 }
 
 .map {
