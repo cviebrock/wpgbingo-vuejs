@@ -99,6 +99,7 @@ body {
   text-align: center;
   background-color: var(--btn-bg);
   color: var(--btn-txt);
+  border: 0;
   border-radius: var(--radius-sm);
   padding: 0.5rem 1rem;
 
@@ -158,4 +159,15 @@ p,
 ul,
 ol {
   margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  border-bottom: 2px solid transparent;
+  transition: var(--link-transition);
+
+  &:hover {
+    border-color: var(--primary-lighter);
+  }
 }

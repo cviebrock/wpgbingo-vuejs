@@ -48,6 +48,7 @@ const iconRotation = computed((): string => {
     align-items: center;
     width: 100%;
     height: 100%;
+    border: 0;
   }
 
   svg {
@@ -60,6 +61,7 @@ const iconRotation = computed((): string => {
 
   &:hover {
     background-color: var(--gray-light);
+    border-radius: var(--radius-sm);
     svg {
       fill: var(--gray-lighter);
     }
@@ -67,6 +69,7 @@ const iconRotation = computed((): string => {
 
   &.selected {
     background-color: var(--secondary-light);
+    border-radius: 0;
     svg {
       fill: var(--secondary-lighter);
     }
