@@ -1,4 +1,4 @@
-import type { tWall } from "@/types";
+import type { tWall } from '@/types';
 
 // images are relative to /public/images/wall
 

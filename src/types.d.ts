@@ -46,6 +46,6 @@ export type tWallEntry = {
   date: string;
   img: string;
   url: string;
-}
+};
 
 export type tWall = Record<tChallengeId, tWallEntry[]>;

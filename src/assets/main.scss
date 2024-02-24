@@ -35,7 +35,8 @@
     'kern';
 
   font-feature-settings:
-     'liga' 1, 'calt' 1; /* fix for Chrome */
+    'liga' 1,
+    'calt' 1; /* fix for Chrome */
 }
 @supports (font-variation-settings: normal) {
   :root {
@@ -53,15 +54,19 @@
       'Helvetica Neue',
       sans-serif;
 
-      font-feature-settings:
-      'dlig', // discretionary ligatures
-      'ss01', // open digits
-      'cv06', // simplified "u"
-      'cv12', // compact "f"
-      'cv13', // compact "t",
+    font-feature-settings:
+      'dlig',
+      // discretionary ligatures
+      'ss01',
+      // open digits
+      'cv06',
+      // simplified "u"
+      'cv12',
+      // compact "f"
+      'cv13',
+      // compact "t",
       'liga' 1,
       'calt' 1; /* fix for Chrome */
- 
   }
 }
 

@@ -39,8 +39,8 @@ function unpopChallenge() {
     </p>
     <p>
       Each bingo card has 25 or more landmarks. You can click on buttons to be shown a row, column or loop of
-      landmarks, which will be highlighted. Click until you find one you like. Some are
-      relatively short (15-20 km) lines of five landmarks. Others are longer.
+      landmarks, which will be highlighted. Click until you find one you like. Some are relatively short
+      (15-20 km) lines of five landmarks. Others are longer.
     </p>
     <p>
       Once you decide on a row, column, or loop, you can click on the “Map it” button and a suggested route

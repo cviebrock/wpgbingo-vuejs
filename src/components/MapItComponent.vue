@@ -33,7 +33,6 @@ section {
   align-items: center;
   color: var(--primary-lightest);
   box-shadow: var(--shadow-dark);
-
 }
 .dist {
   font-size: 1rem;

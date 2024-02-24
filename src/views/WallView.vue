@@ -65,7 +65,6 @@ useHead({
   margin: 1rem 0;
   border-radius: var(--radius-md);
   background-color: var(--gray-lightest);
-
 }
 h3 {
   grid-column-start: 1;
