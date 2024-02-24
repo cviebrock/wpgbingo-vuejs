@@ -57,23 +57,32 @@ figcaption {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 120%;
   padding: 0.5rem;
   font-size: 0;
   line-height: 1.2;
   color: var(--gray-lightest);
-  opacity: 0;
   text-overflow: ellipsis;
-  background-color: var(--color-modal-background);
-  transition: all 0.3s ease-in-out;
+  font-weight: var(--weight-semibold);
+  background: linear-gradient(0deg, var(--color-modal-background-light) 90%, transparent);
 }
 
-figure:hover figcaption {
-  opacity: 1;
-  height: 100%;
+
+@media (hover) {
+  figcaption {
+    opacity: 0;
+    top: 0;
+    bottom: auto;
+    height: 120%;
+    background: var(--color-modal-background-light);
+    transition: all 0.3s ease-in-out;
+  }
+  figure:hover figcaption {
+    opacity: 1;
+    height: 100%;
+  }
 }
 
 @media (min-width: 550px) {
