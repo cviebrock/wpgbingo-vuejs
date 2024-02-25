@@ -171,7 +171,7 @@ a {
   color: var(--primary);
   border-bottom: 2px solid transparent;
   transition: var(--link-transition);
-
+  font-weight: var(--weight-semibold);
   &:hover {
     border-color: var(--primary-lighter);
   }
@@ -182,4 +182,15 @@ img {
   background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDEwMCAxMDAiPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjM1IiBmaWxsPSJub25lIiBzdHJva2U9InJnYmEoMjU1LDI1NSwyNTUsLjI1KSIgc3Ryb2tlLWRhc2hhcnJheT0iMTgwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMTAiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgZHVyPSIxLjVzIiBrZXlUaW1lcz0iMDsxIiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgdHlwZT0icm90YXRlIiB2YWx1ZXM9IjAgNTAgNTA7MzYwIDUwIDUwIi8+PC9jaXJjbGU+PC9zdmc+');
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

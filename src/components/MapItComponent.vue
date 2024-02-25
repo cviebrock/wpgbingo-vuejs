@@ -7,10 +7,10 @@ const props = defineProps<{
 
 <template>
   <aside>
-    <section>
+    <a :href="props.url" target="_blank">
       <div class="dist">{{ props.dist }} km</div>
-      <a :href="props.url" target="_blank">Map It</a>
-    </section>
+      <div class="mapit">Map It</div>
+    </a>
   </aside>
 </template>
 
@@ -20,29 +20,35 @@ aside {
   right: 0;
   bottom: 0;
   margin: 1rem;
+  animation: pop-in 0.2s ease-in-out;
 }
-section {
+
+a {
   width: 6rem;
   height: 6rem;
+  border: 0;
   border-radius: 5rem;
   border-bottom-right-radius: 0;
-  background-color: var(--primary);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--primary-lightest);
+  color: var(--primary-lighter);
+  background-color: var(--primary);
   box-shadow: var(--shadow-dark);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-lightest);
+    background-color: var(--primary-dark);
+  }
 }
 .dist {
-  font-size: 1rem;
-  line-height: 1.2;
   font-weight: var(--weight-black);
 }
-a {
+.mapit {
   font-size: 0.875rem;
-  color: var(--primary-lightest);
-  text-decoration: none;
+  line-height: 1rem;
 }
 
 @media (min-width: 768px) {

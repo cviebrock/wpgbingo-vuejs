@@ -18,9 +18,9 @@ const imageURL = `/images-sm/${props.challengeId}/${card.img}`;
 
 <template>
   <div :class="['grid-card', selected ? 'selected' : '']">
-    <figure>
+    <figure @click="emit('popup', card)">
       <img :src="imageURL" :alt="card.name" :title="card.name" />
-      <figcaption @click="emit('popup', card)">
+      <figcaption>
         {{ card.name }}
       </figcaption>
     </figure>
@@ -48,7 +48,6 @@ img {
   width: 100%;
   height: 100%;
   aspect-ratio: 1;
-  /* border-radius: var(--radius-md); */
   object-fit: cover;
 }
 
@@ -66,9 +65,7 @@ figcaption {
   color: var(--gray-lightest);
   text-overflow: ellipsis;
   font-weight: var(--weight-semibold);
-  background: linear-gradient(0deg, var(--color-modal-background-light) 90%, transparent);
 }
-
 
 @media (hover) {
   figcaption {
@@ -81,6 +78,7 @@ figcaption {
   }
   figure:hover figcaption {
     opacity: 1;
+    background: var(--color-modal-background-light);
     height: 100%;
   }
 }
@@ -88,6 +86,7 @@ figcaption {
 @media (min-width: 550px) {
   figcaption {
     font-size: 0.75rem;
+    background: linear-gradient(0deg, var(--color-modal-background-light) 80%, transparent);
   }
 }
 
