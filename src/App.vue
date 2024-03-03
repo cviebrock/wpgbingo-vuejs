@@ -6,7 +6,7 @@ import { useHead, useSeoMeta } from '@unhead/vue';
 
 const router = useRouter();
 
-const canonical = router.resolve(router.currentRoute.value).href;
+const canonical = `${import.meta.env.BASE_URL}${router.currentRoute.value.path}`;
 
 useHead({
   titleTemplate: (title?: string) =>
