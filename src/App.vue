@@ -1,12 +1,10 @@
 <script setup lang="ts">
-import { RouterView, useRouter } from 'vue-router';
+import { RouterView } from 'vue-router';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 
 import { useHead, useSeoMeta } from '@unhead/vue';
 
-const router = useRouter();
-
-const canonical = `${import.meta.env.BASE_URL}${router.currentRoute.value.path}`;
+const canonical = 'https://wpgcyclebingo.com/'
 
 useHead({
   titleTemplate: (title?: string) =>
