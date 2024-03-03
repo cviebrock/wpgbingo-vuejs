@@ -9,12 +9,6 @@ const canonical = 'https://wpgcyclebingo.com/'
 useHead({
   titleTemplate: (title?: string) =>
     !title ? 'Winnipeg Bicycle Bingo' : `${title} - Winnipeg Bicycle Bingo`,
-  meta: [
-    {
-      name: 'description',
-      content: 'A bingo game that encourages people to discover different areas of Winnipeg on bicycle.',
-    },
-  ],
   link: [
     {
       rel: 'canonical',
@@ -23,6 +17,7 @@ useHead({
   ],
 });
 useSeoMeta({
+  description: 'A bingo game that encourages people to discover different areas of Winnipeg on bicycle.',
   ogUrl: canonical,
   ogType: 'website',
   ogImage: '/images/map.jpg',
