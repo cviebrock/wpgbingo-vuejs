@@ -4,7 +4,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue';
 
 import { useHead, useSeoMeta } from '@unhead/vue';
 
-const canonical = 'https://wpgcyclebingo.com/'
+const canonical = 'https://wpgcyclebingo.com/';
 
 useHead({
   titleTemplate: (title?: string) =>

@@ -5,7 +5,7 @@ useHead({
   title: 'Not Found',
 });
 useSeoMeta({
-  robots: {noindex: true, nofollow: true }
+  robots: { noindex: true, nofollow: true },
 });
 </script>
 
