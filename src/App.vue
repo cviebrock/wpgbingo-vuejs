@@ -18,6 +18,7 @@ useHead({
 });
 useSeoMeta({
   description: 'A bingo game that encourages people to discover different areas of Winnipeg on bicycle.',
+  ogDescription: 'A bingo game that encourages people to discover different areas of Winnipeg on bicycle.',
   ogUrl: canonical,
   ogType: 'website',
   ogImage: '/images/map.jpg',

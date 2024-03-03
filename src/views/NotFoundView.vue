@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { useHead } from '@unhead/vue';
+import { useHead, useSeoMeta } from '@unhead/vue';
 
 useHead({
-  titleTemplate: null,
   title: 'Not Found',
+});
+useSeoMeta({
+  robots: {noindex: true, nofollow: true }
 });
 </script>
 
