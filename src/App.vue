@@ -26,7 +26,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <HeaderComponent v-if="$route.name !== 'home' && $route.name!=='not-found'" />
+  <HeaderComponent v-if="$route.name !== 'home' && $route.name !== 'not-found'" />
   <RouterView />
 </template>
 

@@ -156,4 +156,3 @@ const cards: tCard[] = [
 ];
 
 export default cards;
-

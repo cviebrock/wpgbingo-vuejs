@@ -7,10 +7,11 @@ useHead({
   title: 'Wall of Fame',
 });
 
-const challengeNames = new Map(challenges.map(e => {
-  return [e.id, e.name];
-}));
-
+const challengeNames = new Map(
+  challenges.map((e) => {
+    return [e.id, e.name];
+  }),
+);
 </script>
 
 <template>

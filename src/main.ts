@@ -25,17 +25,19 @@ export const createApp = ViteSSG(App, { routes }, ({ app, router }) => {
 });
 
 export async function includedRoutes(paths: any, routes: RouteRecordRaw[]) {
-  return routes
-    .flatMap((route) => {
-      // don't render the catch-all route
-      if (route.path.startsWith('/:pathMatch')) {
-        return;
-      }
-      // render all the dynamic challenge routes
-      return route.name === 'challenge'
-        ? cChallengeIds.map((id) => route.path.replace(':id', id))
-        : route.path;
-    })
-    // remove undefined entries from array
-    .filter(Boolean);
+  return (
+    routes
+      .flatMap((route) => {
+        // don't render the catch-all route
+        if (route.path.startsWith('/:pathMatch')) {
+          return;
+        }
+        // render all the dynamic challenge routes
+        return route.name === 'challenge'
+          ? cChallengeIds.map((id) => route.path.replace(':id', id))
+          : route.path;
+      })
+      // remove undefined entries from array
+      .filter(Boolean)
+  );
 }
