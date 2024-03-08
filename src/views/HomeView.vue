@@ -29,9 +29,9 @@ onBeforeMount(() => {
         Winnipeg Bike Bingo!
       </h1>
       <nav class="challenges">
-        <template v-for="(item, key) in challenges" :key="key">
-          <RouterLink :to="{ name: 'challenge', params: { id: key } }" class="btn btn-primary">
-            {{ item.name }}
+        <template v-for="(challenge, key) in challenges" :key="key">
+          <RouterLink :to="{ name: 'challenge', params: { id: challenge.id } }" class="btn btn-primary">
+            {{ challenge.name }}
           </RouterLink>
         </template>
       </nav>
