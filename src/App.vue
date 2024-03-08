@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
 import HeaderComponent from '@/components/HeaderComponent.vue';
 
 import { useHead, useSeoMeta } from '@unhead/vue';
@@ -26,7 +26,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <HeaderComponent v-if="$route.path !== '/'" />
+  <HeaderComponent v-if="$route.name !== 'home' && $route.name!=='not-found'" />
   <RouterView />
 </template>
 

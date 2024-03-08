@@ -12,13 +12,16 @@ useSeoMeta({
 <template>
   <main>
     <h1><span>404</span> Not Found</h1>
+    <p><RouterLink :to="{ name: 'home' }" class="link-header">Time to head home…?</RouterLink></p>
   </main>
 </template>
 
 <style scoped>
 main {
-  height: calc(100vh - 4rem);
+  padding: 1rem;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
