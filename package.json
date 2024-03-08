@@ -18,7 +18,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "clean": "rimraf dist",
-    "regenerate-icons": "pwa-asset-generator ./designs/logo.svg public/images/icons --index ./index.html --background '#bada55' --manifest public/manifest.json --path-override '/images/icons' --icon-only --favicon"
+    "regenerate-icons": "pwa-asset-generator ./src/assets/logo.svg public/images/icons --index ./index.html --background '#bada55' --manifest public/manifest.json --path-override '/images/icons' --icon-only --favicon"
   },
   "dependencies": {
     "@gtm-support/vue-gtm": "^2.2.0",
